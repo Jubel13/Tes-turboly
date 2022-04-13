@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Hellow world</p>
+<div>
+  <h1>Welcome to Task App</h1>
+  <% if user_signed_in? %>
+    <%= link_to "See Todos", todos_path, class:"btn btn-primary" %>
+  <% else%>
+    <p>Please login to view task</p>
+  <% end %>
+</div>
