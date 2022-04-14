@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration[7.0]
       t.string :task
       t.date :due
       t.string :priority
+      t.boolean :completed
 
       t.timestamps
     end

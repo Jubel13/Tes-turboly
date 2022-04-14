@@ -14,6 +14,7 @@ class TodosTest < ApplicationSystemTestCase
     visit todos_url
     click_on "New todo"
 
+    check "Completed" if @todo.completed
     fill_in "Due", with: @todo.due
     fill_in "Priority", with: @todo.priority
     fill_in "Task", with: @todo.task
@@ -27,6 +28,7 @@ class TodosTest < ApplicationSystemTestCase
     visit todo_url(@todo)
     click_on "Edit this todo", match: :first
 
+    check "Completed" if @todo.completed
     fill_in "Due", with: @todo.due
     fill_in "Priority", with: @todo.priority
     fill_in "Task", with: @todo.task

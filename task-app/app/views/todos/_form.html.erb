@@ -2,7 +2,6 @@
   <% if todo.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
-
       <ul>
         <% todo.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,22 +9,22 @@
       </ul>
     </div>
   <% end %>
-
   <div>
     <%= form.label :task, style: "display: block" %>
     <%= form.text_field :task %>
   </div>
-
   <div>
     <%= form.label :due, style: "display: block" %>
     <%= form.date_field :due %>
   </div>
-
   <div>
     <%= form.label :priority, style: "display: block" %>
-    <%= form.text_field :priority %>
+    <%= form.select :priority, [["High", "High"], ["Medium", "Medium"], ["Low", "Low"]]%>
   </div>
-
+  <div>
+    <%= form.label :completed, style: "display: block" %>
+    <%= form.check_box :completed %>
+  </div>
   <div>
     <%= form.submit %>
   </div>

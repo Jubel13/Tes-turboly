@@ -2,10 +2,12 @@
 
 one:
   task: MyString
-  due: 2022-04-13
+  due: 2022-04-14
   priority: MyString
+  completed: false
 
 two:
   task: MyString
-  due: 2022-04-13
+  due: 2022-04-14
   priority: MyString
+  completed: false
