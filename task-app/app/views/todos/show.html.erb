@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @todo %>
-
-<div>
-  <%= link_to "Edit this todo", edit_todo_path(@todo) %> |
-  <%= link_to "Back to todos", todos_path %>
-
-  <%= button_to "Destroy this todo", @todo, method: :delete %>
+<div class="p-5 mb-4 bg-light rounded-3 mt-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold"><%= render @todo %></h1>
+    <%= link_to "Edit this todo", edit_todo_path(@todo), class:"btn btn-primary me-1" %>
+    <%= link_to "Back to todos", todos_path, class:"btn btn-primary" %>
+    <%= button_to "Destroy this todo", @todo, method: :delete, class:"btn btn-danger mt-2" %>
+  </div>
 </div>

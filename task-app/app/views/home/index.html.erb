@@ -1,8 +1,10 @@
-<div>
-  <h1>Welcome to Task App</h1>
-  <% if user_signed_in? %>
-    <%= link_to "See Todos", todos_path, class:"btn btn-primary" %>
-  <% else%>
-    <p>Please login to view task</p>
-  <% end %>
+<div class="p-5 mb-4 bg-light rounded-3 mt-3">
+  <div class="container-fluid py-5">
+    <h1>Welcome to Task App</h1>
+    <% if user_signed_in? %>
+      <%= link_to "See Todos", todos_path, class:"btn btn-primary" %>
+    <% else%>
+      <h5>Please login to view task</h5>
+    <% end %>
+  </div>
 </div>
