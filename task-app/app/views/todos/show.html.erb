@@ -7,6 +7,5 @@
     <%= link_to "Edit this todo", edit_todo_path(@todo), class:"btn btn-primary me-1" %>
     <%= link_to "Back to todos", todos_path, class:"btn btn-primary" %>
     <%= button_to "Destroy this todo", @todo, method: :delete, class:"btn btn-danger mt-2" %>
-    <%= DateTime.current.to_date == @todo.due %>
   </div>
 </div>

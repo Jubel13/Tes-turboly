@@ -1,7 +1,7 @@
 <div id="<%= dom_id todo %>">
   <td><%=todo.task%></td>
   <td><%=todo.due%></td>
-  <% if DateTime.current.to_date == todo.due %>
+  <% if DateTime.current.to_date == todo.due and todo.completed == false %>
     <% flash.now[:notice] = "#{todo.task} is due" %>
   <% end %>
   <td>
