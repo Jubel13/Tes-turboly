@@ -5,9 +5,14 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
+  # adapter: sqlite3
+  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 # development:
 #   <<: *default
@@ -41,4 +46,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: task_app
+  username: postgres
+  password: <%= ENV["postgres"] %>
