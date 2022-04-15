@@ -1,6 +1,9 @@
 <div id="<%= dom_id todo %>">
   <td><%=todo.task%></td>
   <td><%=todo.due%></td>
+  <% if DateTime.current.to_date == todo.due %>
+    <% flash.now[:notice] = "#{todo.task} is due" %>
+  <% end %>
   <td>
     <% if todo.priority.to_i == 1 %>
       High
