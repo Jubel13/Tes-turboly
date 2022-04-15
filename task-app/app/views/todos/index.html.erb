@@ -1,5 +1,8 @@
 <% if user_signed_in? %>
   <h1 class="mt-3">Todos</h1>
+  <%= link_to "Sort By Name", :sort => "task" %> |
+  <%= link_to "Sort By Date", :sort => "due" %> |
+  <%= link_to "Sort By Priority", :sort => "priority" %>
   <div id="todos">
     <table class="table">
       <thead>
