@@ -1,6 +1,14 @@
 <div id="<%= dom_id todo %>">
   <td><%=todo.task%></td>
   <td><%=todo.due%></td>
-  <td><%=todo.priority%></td>
+  <td>
+    <% if todo.priority.to_i == 1 %>
+      High
+    <% elsif todo.priority.to_i == 2 %>
+      Medium
+    <%else%>
+      Low
+    <% end %>
+  </td>
   <td><%=todo.completed%></td>
 </div>
