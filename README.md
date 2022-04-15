@@ -1,4 +1,4 @@
 # Tes-turboly
 Technical tes turboly
 
-Link github: https://task-app-ruby.herokuapp.com/
+Link heroku: https://task-app-ruby.herokuapp.com/
