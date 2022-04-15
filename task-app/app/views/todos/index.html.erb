@@ -7,17 +7,23 @@
         <th scope="col">Due Date</th>
         <th scope="col">Priority</th>
         <th scope="col">Completed</th>
+        <th scope="col">User Id</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <% @todos.each do |todo| %>
-        <tr>
-          <%= render todo %>
-          <td>
-            <%= link_to "Show this todo", todo, class:"btn btn-secondary" %>
-          </td>
-        </tr>
+        <% if todo.user == current_user%>
+          <tr>
+            <%= render todo %>
+            <td>
+              <%= todo.user_id%>
+            </td>
+            <td>
+              <%= link_to "Show this todo", todo, class:"btn btn-secondary" %>
+            </td>
+          </tr>
+        <% end%>
       <% end %>
     </tbody>
   </table>
